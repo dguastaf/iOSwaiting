@@ -11,6 +11,11 @@
 
 @implementation WGuest
 @dynamic name;
+@dynamic phoneNumber;
+@dynamic partySize;
+@dynamic timeAdded;
+@dynamic timePaged;
+@dynamic timeInactive;
 
 + (void)load {
     [self registerSubclass];

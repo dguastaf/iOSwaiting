@@ -12,5 +12,11 @@
 @interface WGuest : PFObject<PFSubclassing>
 + (NSString *)parseClassName;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic) NSInteger partySize;
+@property (nonatomic, strong) NSDate *timeAdded;
+@property (nonatomic, strong) NSDate *timePaged;
+@property (nonatomic, strong) NSDate *timeInactive;
+
 
 @end

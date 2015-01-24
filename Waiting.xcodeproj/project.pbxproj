@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5527491A5D9DE2002D1B76 /* WQueueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5527481A5D9DE2002D1B76 /* WQueueTableViewController.swift */; };
 		BCA30B2F1A492490009073F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA30B2E1A492490009073F7 /* AppDelegate.swift */; };
-		BCA30B311A492490009073F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA30B301A492490009073F7 /* ViewController.swift */; };
 		BCA30B341A492490009073F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA30B321A492490009073F7 /* Main.storyboard */; };
 		BCA30B361A492490009073F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA30B351A492490009073F7 /* Images.xcassets */; };
 		BCA30B391A492490009073F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA30B371A492490009073F7 /* LaunchScreen.xib */; };
 		BCA30B451A492490009073F7 /* WaitingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA30B441A492490009073F7 /* WaitingTests.swift */; };
 		BCA30B511A4925FB009073F7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA30B4F1A4925FB009073F7 /* Bolts.framework */; };
 		BCA30B521A4925FB009073F7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA30B501A4925FB009073F7 /* Parse.framework */; };
+		BCBC1FEE1A5D98A1006B0F23 /* WNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC1FED1A5D98A1006B0F23 /* WNetworkManager.swift */; };
+		BCBC1FF21A5D9A3C006B0F23 /* WHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC1FF11A5D9A3C006B0F23 /* WHomeViewController.swift */; };
+		BCBC1FF51A5D9B4D006B0F23 /* WQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC1FF41A5D9B4D006B0F23 /* WQueueTableViewCell.swift */; };
+		BCBC1FF81A5D9BAE006B0F23 /* WQueueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBC1FF71A5D9BAE006B0F23 /* WQueueTableViewCell.xib */; };
 		BCF20AB41A5AF70D00BFA7F6 /* WSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF20AB31A5AF70D00BFA7F6 /* WSecrets.swift */; };
 		BCF20AB61A5AF7AE00BFA7F6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF20AB51A5AF7AE00BFA7F6 /* AudioToolbox.framework */; };
 		BCF20AB81A5AF7C200BFA7F6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF20AB71A5AF7C200BFA7F6 /* CFNetwork.framework */; };
@@ -28,6 +32,7 @@
 		BCF20AC81A5AF87700BFA7F6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF20AC71A5AF87700BFA7F6 /* libz.dylib */; };
 		BCF20ACA1A5AF88000BFA7F6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF20AC91A5AF88000BFA7F6 /* libsqlite3.dylib */; };
 		BCF20AD51A5B79ED00BFA7F6 /* WGuest.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF20AD41A5B79ED00BFA7F6 /* WGuest.m */; };
+		BCFB7FF91A71FB0A004EAF5D /* WAddGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7FF81A71FB0A004EAF5D /* WAddGuestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC5527481A5D9DE2002D1B76 /* WQueueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WQueueTableViewController.swift; path = Controllers/WQueueTableViewController.swift; sourceTree = "<group>"; };
 		BCA30B291A492490009073F7 /* Waiting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waiting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA30B2D1A492490009073F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCA30B2E1A492490009073F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCA30B301A492490009073F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCA30B331A492490009073F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCA30B351A492490009073F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BCA30B381A492490009073F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,6 +59,10 @@
 		BCA30B4F1A4925FB009073F7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BCA30B501A4925FB009073F7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BCA30B531A49275D009073F7 /* Waiting-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Waiting-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCBC1FED1A5D98A1006B0F23 /* WNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WNetworkManager.swift; path = Network/WNetworkManager.swift; sourceTree = "<group>"; };
+		BCBC1FF11A5D9A3C006B0F23 /* WHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHomeViewController.swift; path = Controllers/WHomeViewController.swift; sourceTree = "<group>"; };
+		BCBC1FF41A5D9B4D006B0F23 /* WQueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WQueueTableViewCell.swift; path = View/WQueueTableViewCell.swift; sourceTree = "<group>"; };
+		BCBC1FF71A5D9BAE006B0F23 /* WQueueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WQueueTableViewCell.xib; path = Resources/WQueueTableViewCell.xib; sourceTree = "<group>"; };
 		BCF20AB31A5AF70D00BFA7F6 /* WSecrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WSecrets.swift; path = Utility/WSecrets.swift; sourceTree = "<group>"; };
 		BCF20AB51A5AF7AE00BFA7F6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BCF20AB71A5AF7C200BFA7F6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -68,6 +77,7 @@
 		BCF20AC91A5AF88000BFA7F6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BCF20AD31A5B79ED00BFA7F6 /* WGuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WGuest.h; path = Model/WGuest.h; sourceTree = "<group>"; };
 		BCF20AD41A5B79ED00BFA7F6 /* WGuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WGuest.m; path = Model/WGuest.m; sourceTree = "<group>"; };
+		BCFB7FF81A71FB0A004EAF5D /* WAddGuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WAddGuestViewController.swift; path = Controllers/WAddGuestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +132,13 @@
 		BCA30B2B1A492490009073F7 /* Waiting */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC1FF61A5D9B88006B0F23 /* Resources */,
+				BCBC1FF31A5D9B0C006B0F23 /* Views */,
+				BCBC1FF01A5D9A21006B0F23 /* Controllers */,
+				BCBC1FEF1A5D98A8006B0F23 /* Network */,
 				BCF20ACC1A5B768F00BFA7F6 /* Model */,
 				BCF20AB21A5AF70200BFA7F6 /* Utility */,
 				BCA30B2E1A492490009073F7 /* AppDelegate.swift */,
-				BCA30B301A492490009073F7 /* ViewController.swift */,
 				BCA30B321A492490009073F7 /* Main.storyboard */,
 				BCA30B351A492490009073F7 /* Images.xcassets */,
 				BCA30B371A492490009073F7 /* LaunchScreen.xib */,
@@ -179,6 +192,40 @@
 				BCA30B501A4925FB009073F7 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCBC1FEF1A5D98A8006B0F23 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC1FED1A5D98A1006B0F23 /* WNetworkManager.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		BCBC1FF01A5D9A21006B0F23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCFB7FF81A71FB0A004EAF5D /* WAddGuestViewController.swift */,
+				BCBC1FF11A5D9A3C006B0F23 /* WHomeViewController.swift */,
+				BC5527481A5D9DE2002D1B76 /* WQueueTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BCBC1FF31A5D9B0C006B0F23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC1FF41A5D9B4D006B0F23 /* WQueueTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BCBC1FF61A5D9B88006B0F23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC1FF71A5D9BAE006B0F23 /* WQueueTableViewCell.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BCF20AB21A5AF70200BFA7F6 /* Utility */ = {
@@ -281,6 +328,7 @@
 				BCA30B341A492490009073F7 /* Main.storyboard in Resources */,
 				BCA30B391A492490009073F7 /* LaunchScreen.xib in Resources */,
 				BCA30B361A492490009073F7 /* Images.xcassets in Resources */,
+				BCBC1FF81A5D9BAE006B0F23 /* WQueueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,10 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCA30B311A492490009073F7 /* ViewController.swift in Sources */,
 				BCF20AB41A5AF70D00BFA7F6 /* WSecrets.swift in Sources */,
+				BCBC1FF51A5D9B4D006B0F23 /* WQueueTableViewCell.swift in Sources */,
+				BCBC1FEE1A5D98A1006B0F23 /* WNetworkManager.swift in Sources */,
 				BCF20AD51A5B79ED00BFA7F6 /* WGuest.m in Sources */,
 				BCA30B2F1A492490009073F7 /* AppDelegate.swift in Sources */,
+				BC5527491A5D9DE2002D1B76 /* WQueueTableViewController.swift in Sources */,
+				BCBC1FF21A5D9A3C006B0F23 /* WHomeViewController.swift in Sources */,
+				BCFB7FF91A71FB0A004EAF5D /* WAddGuestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
