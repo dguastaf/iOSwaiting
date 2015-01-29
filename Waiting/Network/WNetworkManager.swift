@@ -10,4 +10,19 @@ import Foundation
 
 class WNetworkManager{
 
+    class func reloadAllColumns(completion: ([WGuest]) -> ()){
+        let query = PFQuery(className: WGuest.parseClassName());
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error != nil{
+                NSLog("error!")
+                completion([])
+            }
+            else{
+                if let guests = objects as? [WGuest]{
+                    completion(guests)
+                }
+            }
+        }
+    }
+    
 }

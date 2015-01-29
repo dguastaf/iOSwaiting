@@ -19,6 +19,13 @@ class WAddGuestViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var partySizeTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    var editingGuest: WGuest? = nil{
+        didSet{
+            self.populateForEditingGuest();
+        }
+    }
+    
     var isAddingGuest: Bool = false {
         didSet{
             if self.isAddingGuest{
@@ -40,15 +47,22 @@ class WAddGuestViewController: UIViewController, UITextFieldDelegate{
                     self.phoneNumberTextField.text = savedNumber
                 }
                 self.noPhoneButton.backgroundColor = UIColor.lightGrayColor()
+                self.phoneNumberTextField.backgroundColor = UIColor.whiteColor()
             }
             else{
                 if !self.phoneNumberTextField.text.isEmpty{
                     self.savedPhoneNumber = self.phoneNumberTextField.text
-                    self.phoneNumberTextField.text = nil
                 }
+                self.phoneNumberTextField.backgroundColor = UIColor.lightGrayColor()
+                self.phoneNumberTextField.text = nil
                 self.noPhoneButton.backgroundColor = self.addButton.backgroundColor
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.populateForEditingGuest();
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -102,11 +116,11 @@ class WAddGuestViewController: UIViewController, UITextFieldDelegate{
         
         self.isAddingGuest = true
         
-        let guest = WGuest()
-        
-        
         let errorStr = self.isValidInput()
         if (errorStr == nil){
+            
+            let guest = self.editingGuest ?? WGuest()
+            
             guest.name = self.nameTextField.text
             guest.phoneNumber = self.phoneNumberTextField.text
             guest.timeAdded = NSDate()
@@ -170,6 +184,26 @@ class WAddGuestViewController: UIViewController, UITextFieldDelegate{
         }
         
         return nil
+    }
+    
+    private func populateForEditingGuest(){
+        if self.nameTextField == nil{
+            return;
+        }
+        if let guest = self.editingGuest{
+            self.nameTextField.text = guest.name
+            self.partySizeTextField.text = "\(guest.partySize)"
+            if guest.phoneNumber != nil && !guest.phoneNumber.isEmpty{
+                self.hasPhoneNumber = true
+                self.phoneNumberTextField.text = guest.phoneNumber
+            }
+            else{
+                self.phoneNumberTextField.text = nil
+                self.hasPhoneNumber = false
+            }
+            
+            self.addButton.setTitle("Update", forState: .Normal)
+        }
     }
     
     

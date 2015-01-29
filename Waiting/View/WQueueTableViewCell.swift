@@ -19,5 +19,10 @@ class WQueueTableViewCell: UITableViewCell{
         println("text tapped")
     }
     
+    func populateWithGuest(guest: WGuest, timeString: String){
+        self.nameLabel.text = guest.name;
+        self.timeLabel.text = timeString;
+        self.partySizeLabel.text = "\(guest.partySize)"
+    }
     
 }
