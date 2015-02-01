@@ -80,7 +80,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIi-zs-2c5">
                                 <rect key="frame" x="173" y="195" width="241" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <connections>
                                     <outlet property="delegate" destination="2qF-ba-dFM" id="FeU-je-Nt8"/>
                                 </connections>
@@ -140,7 +140,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ll-nZ-OEn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IRe-v8-CtZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IRe-v8-CtZ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

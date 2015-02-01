@@ -16,6 +16,7 @@
 @dynamic timeAdded;
 @dynamic timePaged;
 @dynamic timeInactive;
+@dynamic status;
 
 + (void)load {
     [self registerSubclass];
@@ -23,6 +24,12 @@
 
 + (NSString *)parseClassName {
     return @"Guest";
+}
+
++ (WGuest *)createGuest{
+    WGuest *guest = [[WGuest alloc]init];
+    guest.status = kWaiting;
+    return guest;
 }
 
 @end

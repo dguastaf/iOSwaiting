@@ -37,6 +37,7 @@ class WHomeViewController: UIViewController {
         for (var i = 0; i < self.DefaultRows; i++){
 
             let queueViewController = WQueueTableViewController()
+            queueViewController.headerTitle = self.titleForQueueNumber(i)
             setWidthForColumn(queueViewController, index: i)
             self.view.addSubview(queueViewController.view)
             queueViewController.didMoveToParentViewController(self)
@@ -84,6 +85,19 @@ class WHomeViewController: UIViewController {
                 queueViewController.tableView.reloadData();
             }
             self.isReloading = false;
+        }
+    }
+    
+    private func titleForQueueNumber(queueNum: NSInteger) -> String{
+        switch (queueNum){
+        case 0:
+            return "1 - 4"
+        case 1:
+            return "5 - 6"
+        case 2:
+            return "7 - 8"
+        default:
+            return "9+"
         }
     }
     

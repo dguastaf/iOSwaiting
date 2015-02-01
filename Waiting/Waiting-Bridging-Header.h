@@ -7,4 +7,6 @@
 //
 
 #import <Parse/Parse.h>
+#import <AFNetworking/AFNetworking.h>
+
 #import "WGuest.h"

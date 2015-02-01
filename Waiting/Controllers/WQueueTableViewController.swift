@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class WQueueTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate{
+class WQueueTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, WQueueTableViewCellDelegate{
     let QueueTableViewCellNib = "WQueueTableViewCell"
     let QueueTalbeViewCellReuseID = "QueueTableViewCell"
     var guests:[WGuest] = []
     var dateFormatter = NSDateFormatter();
+    var headerTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class WQueueTableViewController: UITableViewController, UITableViewDataSource, U
         self.tableView.registerNib(nib, forCellReuseIdentifier: "QueueTableViewCell")
         dateFormatter.dateStyle = .NoStyle
         dateFormatter.timeStyle = .ShortStyle
+        self.tableView.separatorStyle = .None
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +35,7 @@ class WQueueTableViewController: UITableViewController, UITableViewDataSource, U
         let guest = guests[indexPath.row]
         let timeString = dateFormatter.stringFromDate(guest.timeAdded)
         cell.populateWithGuest(guest, timeString: timeString)
+        cell.delegate = self
         return cell
     }
     
@@ -42,14 +46,38 @@ class WQueueTableViewController: UITableViewController, UITableViewDataSource, U
             navController.modalPresentationStyle = .FormSheet
             if let addController = navController.viewControllers.first as? WAddGuestViewController{
                 weak var weakSelf = self
-                self.presentViewController(navController, animated: true, completion: { () -> Void in
-
-                })
-                    addController.editingGuest = weakSelf?.guests[indexPath.row]
+                self.presentViewController(navController, animated: true, completion: nil)
+                addController.editingGuest = weakSelf?.guests[indexPath.row]
             }
         }
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let nib = UINib(nibName: "WQueueTableViewHeader", bundle: NSBundle(forClass: self.dynamicType))
         
+        if let headerView = nib.instantiateWithOwner(self, options: nil).first as? WQueueTableViewHeader{
+            headerView.titleLabel.text = self.headerTitle
+            return headerView
+        }
         
+        return nil
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func actionButtonTapped(sentGuest: WGuest?) {
+        if let guest = sentGuest{
+            switch(guest.status){
+            case .Waiting:
+                WNetworkManager.sendText(guest, completion: nil)
+                guest.status = .Paged
+                guest.saveInBackgroundWithBlock(nil)
+            default:
+                println("todo")
+            }
+        }
     }
     
 }

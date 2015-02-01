@@ -119,7 +119,7 @@ class WAddGuestViewController: UIViewController, UITextFieldDelegate{
         let errorStr = self.isValidInput()
         if (errorStr == nil){
             
-            let guest = self.editingGuest ?? WGuest()
+            let guest = self.editingGuest ?? WGuest.createGuest()!
             
             guest.name = self.nameTextField.text
             guest.phoneNumber = self.phoneNumberTextField.text
